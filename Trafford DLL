@@ -1,1 +1,21 @@
+import serial
+
+ser = serial.Serial()
+ser.baudrate = 38400
+ser.port = 'COM8'
+ser.open()
+
+
+ser.flushInput()
+res = ser.read(2618).decode('utf-8')
+print(res)
+
+if ser.inWaiting() > 0:
+    ser.flushInput()
+ser.timeout = 1.
+ser.write(bytes(b'cns r 2 0 0\r'))
+cmd = ser.read(1054).decode('utf-8')
+print(cmd)
+
+ser.close()
 
