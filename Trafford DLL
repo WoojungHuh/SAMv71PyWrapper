@@ -16,11 +16,13 @@ if ser.inWaiting() > 0:
     ser.flushInput()
 ser.timeout = 1.
 
-s = input('Enter command: ') + '\r'
-b = bytearray()
-cm = s.encode('utf-8')
-ser.write(cm)
-cmd = ser.read(1054).decode('utf-8')
-print(cmd)
+s = input('Enter command or press quit: ') + '\r'
+while s != 'quit' + '\r': 
+    b = bytearray()
+    cm = s.encode('utf-8')
+    ser.write(cm)
+    cmd = ser.read(1054).decode('utf-8')
+    print(cmd)
+    s = input('Enter command or press quit: ') + '\r'
 
 ser.close()
