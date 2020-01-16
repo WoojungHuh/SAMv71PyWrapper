@@ -1,6 +1,6 @@
 # SAMv71PyWrapper
 
-Scope: Simple Python script for SAMv71 CLI via COM PORT interface with Trafford DLL for automated read/write capability.
+Scope: Simple Python script for SAMv71 CLI via COM PORT interface with DLL for automated read/write capability.
 
 Usage Guide (Terminal.py) NOT NECESSARY, PERIPHERAL TESTING SCRIPT
   -Download and Install com0com for Windows users
