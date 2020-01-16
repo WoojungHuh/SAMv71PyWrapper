@@ -26,3 +26,5 @@ while s != 'quit' + '\r':
     s = input('Enter command or press quit: ') + '\r'
 
 ser.close()
+
+   
